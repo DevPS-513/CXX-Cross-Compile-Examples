@@ -1,17 +1,16 @@
 
-Tutorial files for .so files and cross compiling
+# Tutorial .so files and cross compiling from x86 to arm
 
-Topics Covered
+prints "hello from depedancy1" which is also cross compiled, example
+shows when moving the .so file to the linked location the app will run on the Pi (Arm32) when compiled in a x86 environment
 
--gcc vs g++
--where headers are located 
--statically linked
+pi@raspberrypi:~ $ cp libhello.so /usr/lib/
+cp: cannot create regular file '/usr/lib/libhello.so': Permission denied
+pi@raspberrypi:~ $ sudo cp libhello.so /usr/lib/
+pi@raspberrypi:~ $ ./myapp
+hello from dependancy1
+Hello from main.cpp
+
+
 
 https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads (see if using same version as on pi works )
-
-https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
-79b55db33aa08018b5c86252de9fb25b  arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-linux-gnueabihf.tar.xz
-
-apt-get -s install <package>
-
-apt-get -V -s upgrade
