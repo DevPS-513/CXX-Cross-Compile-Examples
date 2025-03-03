@@ -1,0 +1,6 @@
+.vscode
+arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-linux-gnueabihf/
+arm-gnu-toolchain*
+/**/build
+qemu_vms/*
+RaspeberryPi_sdcard

@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y \
+    file \
+    fdisk xz \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN apt install -y build-essential autoconf libtool pkg-config
